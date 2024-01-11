@@ -9,5 +9,6 @@ class Line:
         self.a = point_a
         self.b = point_b
     def draw(self, canvas:Canvas, fill_color='black'):
-        canvas.create_line(self.point_a.x, self.point_a.y, self.point_b.x, self.point_b.y, fill=fill_color, width=3)
+        # print(f'self.a: {self.a.x}, self.b: {self.b}')
+        canvas.create_line(self.a.x, self.a.y, self.b.x, self.b.y, fill=fill_color, width=3)
         canvas.pack()
