@@ -16,7 +16,13 @@ class Cell:
     def draw(self, top_left_x, top_left_y, bottom_right_x, bottom_right_y):
         top_left = Point(top_left_x, top_left_y)
         bottom_right = Point(bottom_right_x, bottom_right_y)
+        top_right = Point(bottom_right_x, top_left_y)
+        bottom_left = Point(top_left_x, bottom_right_y)
         if self.has_left_wall:
-            self._win.draw_line(Line(self._x1, self._y1), Line(self._x1, self._y2))
+            self._win.draw_line(Line(top_left), Line(bottom_left))
         if self.has_top_wall:
-            self._win.draw_line(Line())
+            self._win.draw_line(Line(top_left), Line(top_right))
+        if self.has_right_wall:
+            self._win.draw_line(Line(top_right), Line(bottom_right))
+        if self.has_bottom_wall:
+            self._win.draw_line(Line(bottom_right), Line(bottom_left))
