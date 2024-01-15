@@ -13,11 +13,11 @@ class Cell:
         self._y1 = y1
         self._y2 = y2
         self._win = win
-    def draw(self, top_left_x, top_left_y, bottom_right_x, bottom_right_y, fill_color):
-        top_left = Point(top_left_x, top_left_y)
-        bottom_right = Point(bottom_right_x, bottom_right_y)
-        top_right = Point(bottom_right_x, top_left_y)
-        bottom_left = Point(top_left_x, bottom_right_y)
+    def draw(self, fill_color):
+        top_left = Point(self._x1, self._y1)
+        bottom_right = Point(self._x2, self._y2)
+        top_right = Point(self._x2, self._y1)
+        bottom_left = Point(self._x1, self._y2)
         if self.has_left_wall:
             self._win.draw_line(Line(top_left, bottom_left), fill_color)
         if self.has_top_wall:
@@ -26,3 +26,7 @@ class Cell:
             self._win.draw_line(Line(top_right, bottom_right), fill_color)
         if self.has_bottom_wall:
             self._win.draw_line(Line(bottom_right, bottom_left), fill_color)
+    def draw_move(self, to_cell, undo=False):
+        line = 'red'
+        if undo:
+            line = 'gray'
