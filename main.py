@@ -23,6 +23,7 @@ window.draw_line(line_b, 'green')
 cell.draw('blue')
 cell2.draw('purple')
 cell3.draw('orange')
+cell.draw_move(cell3)
 window.wait_for_close()
 
 
