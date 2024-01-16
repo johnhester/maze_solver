@@ -1,9 +1,9 @@
-from Classes.Windows import Windows
+from Classes.Windows import Window
 from Classes.Line import Line
 from Classes.Point import Point
 from Classes.Cell import Cell
 
-window = Windows(1000, 1000)
+window = Window(1000, 1000)
 
 point_a = Point(100, 100)
 point_b = Point(100, 250)
@@ -18,8 +18,6 @@ cell2 = Cell(250,250,300,200, window)
 cell3 = Cell(300,200,350,150, window)
 
 
-window.draw_line(line, 'pink')
-window.draw_line(line_b, 'green')
 cell.draw('blue')
 cell2.draw('purple')
 cell3.draw('orange')

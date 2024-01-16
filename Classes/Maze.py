@@ -1,8 +1,8 @@
-from Classes.Windows import Windows
+from Classes.Windows import Window
 from Classes.Cell import Cell
 
 class Maze: 
-    def __init__(self, x1, y1, num_rows, num_cols, cell_size_x, cell_size_y, win:Windows) -> None:
+    def __init__(self, x1, y1, num_rows, num_cols, cell_size_x, cell_size_y, win:Window) -> None:
         self._x1 = x1
         self._y1 = y1
         self.num_rows = num_rows

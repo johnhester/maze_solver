@@ -1,9 +1,9 @@
-from Classes.Windows import Windows
+from Classes.Windows import Window
 from Classes.Line import Line
 from Classes.Point import Point
 
 class Cell:
-    def __init__(self, x1, y1, x2, y2, win:Windows, left_wall = True, right_wall = True, top_wall = True, bottom_wall = True) -> None:
+    def __init__(self, x1, y1, x2, y2, win:Window, left_wall = True, right_wall = True, top_wall = True, bottom_wall = True) -> None:
         self.has_left_wall = left_wall
         self.has_right_wall = right_wall
         self.has_top_wall = top_wall 

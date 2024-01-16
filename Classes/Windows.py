@@ -1,7 +1,7 @@
 from tkinter import Tk, BOTH, Canvas
 from Classes.Line import Line
 
-class Windows:
+class Window:
     def __init__(self, width, height) -> None:
         # constructor should take a width and height
         self.width = width
