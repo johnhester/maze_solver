@@ -18,12 +18,13 @@ cell2 = Cell(250,250,300,200, window)
 cell3 = Cell(300,200,350,150, window)
 
 
-window.draw_line(line, 'red')
+window.draw_line(line, 'pink')
 window.draw_line(line_b, 'green')
 cell.draw('blue')
 cell2.draw('purple')
 cell3.draw('orange')
 cell.draw_move(cell3)
+cell3.draw_move(cell2)
 window.wait_for_close()
 
 
